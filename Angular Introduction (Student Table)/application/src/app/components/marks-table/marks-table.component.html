@@ -1,0 +1,16 @@
+<tr>
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <th>Subject 1</th>
+        <th>Subject 2</th>
+        <th>Average Marks</th>
+      </tr>
+      <tr *ngFor="let info of studentInfo">
+        <td>{{info.name}}</td>
+        <td>{{info.marks1}}</td>
+        <td>{{info.marks2}}</td>
+        <td>{{getAvg([info.marks1,info.marks2])}}</td>
+      </tr>
+    </table>
+  </tr>

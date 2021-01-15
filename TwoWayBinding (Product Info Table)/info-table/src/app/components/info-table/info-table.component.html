@@ -1,0 +1,26 @@
+<h1>Product Information</h1>
+<!-- {{info | json}} -->
+<input type="text" [(ngModel)]="searchText" placeholder="Search...." id="search">
+<br>
+{{searchText}}
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Product Code</th>
+        <th>Branch Name</th>
+        <th>Branch Code</th>
+        <th>Address</th>
+        <th>Details</th>
+    </tr>
+    <tr *ngFor="let ele of info">
+        <td>  <img src="assets/img/image.jpg" style="width: 100px;"></td>
+        <td>{{ele.name}}</td>
+        <th>{{ele.code}}</th>
+        <th>{{ele.branchName}}</th>
+        <th>{{ele.branchCode}}</th>
+        <th>{{ele.address}}</th>
+        <th><button (click)="displayInfo(ele)">Info</button></th>
+        
+    </tr>
+</table>
