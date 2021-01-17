@@ -1,4 +1,4 @@
-export class Info {
+export class ProductInfo {
     name: string;
     code: string;
     branchName: string;

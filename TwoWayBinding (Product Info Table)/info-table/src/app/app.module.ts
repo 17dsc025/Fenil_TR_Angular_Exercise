@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { InfoTableComponent } from './components/info-table/info-table.component';
+import { ProductInfoTableComponent } from './components/product-info-table/product-info-table.component';
+import { ProductHomeComponent } from './components/product-home/product-home.component';
+
+import { AppRoutingModule } from './app-routing.module'; 
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    InfoTableComponent
+    ProductInfoTableComponent,
+    ProductHomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
