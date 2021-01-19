@@ -4,8 +4,21 @@
   placeholder="Search...."
   id="search"
 />
-<br />
 {{ searchText }}
+<br />
+<button type="button" class="btn btn-primary add-button" (click)="addProductForm=!addProductForm" >
+  Add Product
+</button>
+
+<form *ngIf="addProductForm" #productInfo = "ngForm" (ngSubmit) = "createProduct(productInfo.value)" >
+  <input type="text" name="name" id="" placeholder="Product Name" ngModel><br />
+  <input type="text" name="code" id="" placeholder="Product Code" ngModel><br />
+  <input type="text" name="branchName" id="" placeholder="Branch Name" ngModel><br />
+  <input type="text" name="branchCode" id="" placeholder="Branch Code" ngModel><br />
+  <input type="text" name="address" id="" placeholder="Address"><br />
+  <button type="submit">Create New Product</button>
+</form>
+<br />
 <table>
   <tr>
     <th>Image</th>
@@ -15,6 +28,8 @@
     <th>Branch Code</th>
     <th>Address</th>
     <th>Details</th>
+    <th>Update</th>
+    <th>Delete</th>
   </tr>
   <tr *ngFor="let ele of productInfo">
     <td><img src="assets/img/image.jpg" style="width: 100px" /></td>
@@ -26,6 +41,16 @@
     <th>
       <button type="button" class="btn btn-info" (click)="displayInfo(ele)">
         Info
+      </button>
+    </th>
+    <th>
+      <button type="button" class="btn btn-primary" (click)="updateProduct(ele)">
+        Update
+      </button>
+    </th>
+    <th>
+      <button type="button" class="btn btn-danger" (click)="deleteProduct(ele)">
+        Delete
       </button>
     </th>
   </tr>

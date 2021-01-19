@@ -13,6 +13,9 @@ table {
   #search{
     width: 500px;
     padding: 5px;
-    margin: 20px;
+    margin: 10px;
     margin-left: 0px;
+  }
+  .add-button{
+    margin-bottom: 10px;
   }
