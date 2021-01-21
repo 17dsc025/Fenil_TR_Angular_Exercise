@@ -10,7 +10,4 @@ describe('GetInfoService', () => {
     service = TestBed.inject(GetProductInfoService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
 });
